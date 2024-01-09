@@ -1,2 +1,2 @@
 # shellscript
-devops
+training for devops 
