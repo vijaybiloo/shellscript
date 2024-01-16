@@ -39,7 +39,7 @@ VALIDATE $? "Installing wget"
 
 yum install zip -y &>>$LOG
 
-VALIDATE &? "Installing zip"
+VALIDATE $? "Installing zip"
 
 yum install postfix -y &>>$LOG
 
@@ -47,7 +47,7 @@ VALIDATE $? "Installing Postfix"
 
 yum install nginx -y &>>$LOG
 
-VALIDATE &? "Installing nginx"
+VALIDATE $? "Installing nginx"
 
 systemctl start nginx &>>$LOG
 systemctl enable nginx &>>$LOG
