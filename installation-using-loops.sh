@@ -1,8 +1,9 @@
 #!/bin/bash
 
 DATA=$(date +%F)
+LOGDIR=/home/vijay/shellscripts-logs
 SCRIPT=$0
-LOG=/home/vijay/shellscripts/$SCRIPT-$DATA.log
+LOGFILE=$LOGDIR/$0-$DATA.log
 USERID=$(id -u)
 
 R="\e[31m"
@@ -30,11 +31,11 @@ VALIDATE(){
 for i in $@
 do
 
-    yum list installed $i &>>$LOG
+    yum list installed $i &>>$LOGFILE
     if [ $? -ne 0 ]
     then
         echo "$i is not installed, lets install it"
-        yum install $i -y &>>$LOG
+        yum install $i -y &>>$LOGFILE
         VALIDATE $? "$i"
     else 
         echo -e "$Y $i is already installed $N"
