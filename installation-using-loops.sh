@@ -38,7 +38,7 @@ do
         VALIDATE $? "$i"
     else 
         echo -e "$Y $i is already installed $N"
+        yum remove $i -y &>>LOGFILE
     fi
 
-    #yum install $i -y
 done
