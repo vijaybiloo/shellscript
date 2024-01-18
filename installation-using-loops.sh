@@ -1,9 +1,8 @@
 #!/bin/bash
 
 DATA=$(date +%F)
-LOGDIR=/tmp/shellscript-logs
 SCRIPT=$0
-LOGFILE=$LOGDIR/$0-$DATA.log
+LOGFILE=/tmp/$SCRIPT-$DATA.log
 USERID=$(id -u)
 
 R="\e[31m"
