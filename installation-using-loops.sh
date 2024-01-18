@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATA=$(date +%F)
-LOGDIR=/home/vijay/shellscripts/shellscript-logs
+LOGDIR=/tmp/shellscript-logs
 SCRIPT=$0
 LOGFILE=$LOGDIR/$0-$DATA.log
 USERID=$(id -u)
