@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATA=$(date -%F)
+DATA=$(date +%F)
 SCRIPT=$0
 LOG=/home/vijay/shellscripts/$SCRIPT-$DATA.log
 USERID=$(id -u)
