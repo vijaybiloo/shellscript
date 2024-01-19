@@ -2,7 +2,8 @@
 
 DATA=$(date +%F)
 SCRIPT=$0
-LOGFILE=/tmp/$SCRIPT-$DATA.log
+LOGDIR=/home/vijay/shellscript/shellscript.log
+LOGFILE=$LOGDIR/$0-$DATA.log
 USERID=$(id -u)
 
 R="\e[31m"
@@ -38,7 +39,7 @@ do
         VALIDATE $? "$i"
     else 
         echo -e "$Y $i is already installed $N"
-        
+    
     fi
 
 done
