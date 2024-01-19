@@ -7,7 +7,7 @@ LOGDIR=/home/vijay/shellscript/shellscript.log
 SCRIPT=$0
 LOGFILE=$LOGDIR/$SCRIPT-$DATE.log
 
-FILES_TO_DELETE=$(find $APP_LOGS_DIR -name ".log" -type f -mtime +14)
+FILES_TO_DELETE=$(find $APP_LOGS_DIR -name "*.log" -type f -mtime +14)
 
 
 echo "script started executing at $DATE" &>>LOGFILE
