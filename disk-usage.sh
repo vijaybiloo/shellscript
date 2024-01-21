@@ -4,10 +4,10 @@
 # Validations
 # Log redirections
 
-LOGFILE_DIRECTORY= /tmp/log.dir
+LOGDIR= /tmp/log.dir
 DATE=$(date +%F:%H:%M:%S)
 SCRIPT=$0
-LOGFILE=$LOGFILE_DIRECTORY/$SCRIPT-$DATE.log
+LOGFILE=$LOGDIR/$SCRIPT-$DATE.log
 
 R="\e[31m"
 G="\e[32m"
