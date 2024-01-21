@@ -4,10 +4,10 @@
 # Validations
 # Log redirections
 
-LOGDIR=/tmp/log.dir
+LOGFILE_DIRECTORY=/tmp/log.dir
 DATE=$(date +%F:%H:%M:%S)
 SCRIPT=$0
-LOGFILE=$LOGDIR/$SCRIPT-$DATE.log
+LOGFILE=$LOGFILE_DIRECTORY/$SCRIPT-$DATE.log
 
 R="\e[31m"
 G="\e[32m"
@@ -31,6 +31,7 @@ do
     then
         message+="HIGH DISK USAGE on $partition: $usage\n"
     fi
+done <<< $DISK_USAGE
 
     echo -e "message: $message"
 
@@ -38,6 +39,3 @@ do
 
     #how to call other shell script from your current script
     sh mail.sh dpk.vijay@gmail.com "High Disk Usage" "$message" "DEVOPS TEAM" "High Disk usage"
-
-
-    
