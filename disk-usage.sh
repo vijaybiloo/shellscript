@@ -38,3 +38,6 @@ do
 
     #how to call other shell script from your current script
     sh mail.sh dpk.vijay@gmail.com "High Disk Usage" "$message" "DEVOPS TEAM" "High Disk usage"
+
+
+    
