@@ -37,4 +37,5 @@ do
     #echo "$message" | mail -s "High Disk usage" dpk.vijay@gmail.com
 
     #how to call other shell script from your current script
+    
     sh mail.sh dpk.vijay@gmail.com "High Disk Usage" "$message" "DEVOPS TEAM" "High Disk usage"
