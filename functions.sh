@@ -16,14 +16,13 @@ VALIDATE(){
     else
         echo -e "$2 ....$G SUCCES $N"
     fi
-
 }
 
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then 
-    echo "Run this script with toot access"
+    echo "Run this script with root access"
     exit 1
 else
     echo "You are root user"
