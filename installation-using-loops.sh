@@ -1,9 +1,9 @@
 #!/bin/bash
 
-DATA=$(date +%F)
+DATE=$(date +%F)
 SCRIPT=$0
-LOGDIR=/home/vijay/shellscript/shellscript.log
-LOGFILE=$LOGDIR/$0-$DATA.log
+LOGDIR=/home/centos/shellscript/shellscript.log
+LOGFILE=$LOGDIR/$0-$DATE.log
 USERID=$(id -u)
 
 R="\e[31m"
